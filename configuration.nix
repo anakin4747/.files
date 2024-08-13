@@ -26,6 +26,9 @@
             options = "caps:escape";
         };
 
+        # Pull in everything needed for Gnome Desktop Environment
+        desktopManager.gnome.enable = true;
+
         # Login with virtual tty
         autorun = false;
         exportConfiguration = true;
@@ -62,8 +65,8 @@
         git
         st
 
-        # gnome.gnome-shell
-        # gnome.gnome-terminal
+        gnome.gnome-shell
+        gnome.gnome-terminal
         # brave
         # mattermost-desktop
         # tio
