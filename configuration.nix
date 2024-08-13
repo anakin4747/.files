@@ -54,9 +54,10 @@
         isNormalUser = true;
         shell = pkgs.zsh;
         extraGroups = [
-            "wheel"
+            "dialout"
             "docker"
             "networkmanager"
+            "wheel"
         ];
     };
 
