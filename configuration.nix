@@ -7,6 +7,7 @@
 {
     imports = [ # Include the results of the hardware scan.
         ./hardware-configuration.nix
+        /home/kin/.config/home.nix
     ];
 
     nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -41,35 +42,18 @@
 
     # Enable sound.
     hardware.pulseaudio.enable = true;
-    # OR
-    # services.pipewire = {
-    #   enable = true;
-    #   pulse.enable = true;
-    # };
 
     # Enable touchpad support (enabled default in most desktopManager).
     services.libinput.enable = true;
 
-    users.users.kin = {
-        isNormalUser = true;
-        shell = pkgs.zsh;
-        extraGroups = [
-            "dialout"
-            "docker"
-            "networkmanager"
-            "wheel"
-        ];
-    };
-
     environment.systemPackages = with pkgs; [
-        zsh
-        zsh-syntax-highlighting
-        awesome
-        git
-        st
+        neovim
+        vim
 
-        gnome.gnome-shell
-        gnome.gnome-terminal
+        # awesome
+
+        # gnome.gnome-shell
+        # gnome.gnome-terminal
         # brave
         # mattermost-desktop
         # tio
@@ -78,7 +62,7 @@
         # zip
 
         # Neovim packages
-        neovim
+        # neovim
         # nil
         # clang-tools
         # cmake-language-server
