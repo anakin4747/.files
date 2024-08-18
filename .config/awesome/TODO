@@ -1,0 +1,2 @@
+
+Only try to move within vim if the client is running vim

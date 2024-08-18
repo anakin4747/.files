@@ -5,7 +5,7 @@
 { pkgs, ... }:
 
 {
-    imports = [ # Include the results of the hardware scan.
+    imports = [
         ./hardware-configuration.nix
         /home/kin/.config/home.nix
     ];
@@ -35,7 +35,7 @@
         # Login with virtual tty
         autorun = false;
         exportConfiguration = true;
-        desktopManager.startx.enable = true;
+        displayManager.startx.enable = true;
     };
 
     services.printing.enable = true;
