@@ -11,7 +11,7 @@ ll='ls -l1F' \
 ls='ls --color=auto' \
 pst='pstree -C age' \
 t='tree -CF' \
-ta='tree -aCF' \
+ta='tree -aCF -I .git' \
 up='cd $(git rev-parse --show-toplevel)' \
 vc='cd ~/.config/nvim/lua/kin/' \
 wire='wireshark &> /dev/null &' \
